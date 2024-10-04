@@ -62,12 +62,12 @@ def main(secret: str) -> None:
     turn: int = 0
     guess: str = ""
 
-    while (
-        turn < 6 and guess != secret
+    while (turn < 6) and (
+        guess != secret
     ):  # stops when player reaches 6 turns or wins the game
         turn += 1
         print(f"=== Turn {turn}/6 ===")
-        guess = input_guess(5)  # prompts user for guess
+        guess = input_guess(len(secret))  # prompts user for guess
         print(emojified(guess, secret))  # prints emoji corresponding to guess
 
     if guess == secret:  # player wins
