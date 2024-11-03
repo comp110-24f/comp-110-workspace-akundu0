@@ -54,7 +54,7 @@ def test_add_at_index_edge() -> None:
 def test_add_at_index_rv() -> None:
     """Tests that add_at_index returns nothing"""
     a: list[int] = [1, 2, 3, 4]
-    assert add_at_index(a, 2, 2) == None
+    assert add_at_index(a, 2, 2) is None
 
 
 def test_add_at_index_mutate() -> None:
