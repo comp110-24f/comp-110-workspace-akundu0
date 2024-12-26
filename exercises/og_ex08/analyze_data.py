@@ -1,5 +1,5 @@
-from exercises.ex08.data_utils import read_csv_rows, column_values, columnar
-from exercises.ex08.DataFrame import DataFrame
+from exercises.og_ex08.data_utils import read_csv_rows, column_values, columnar
+from exercises.og_ex08.DataFrame import DataFrame
 
 """ 1.0 Use read_csv_rows to import both files of data. """
 early_data: list[dict[str, str]] = read_csv_rows("data/baby_names_2012_2017.csv")
@@ -34,4 +34,3 @@ name_and_count: DataFrame = df.head(10).select(["name", "count"])
 """ 2.4 Use filter_by_col_value to filter out only people born in 2020. """
 names_2020: DataFrame = df.filter_by_col_value("year", "2020")
 # names_2020.tabulate()
-
